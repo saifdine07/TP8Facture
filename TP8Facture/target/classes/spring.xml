@@ -1,0 +1,19 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<bean id="idC" class="cigma.pfe.application.controllers.FactureController">
+	
+		<property name="ifactureService" ref="idS"></property>
+	
+	</bean>
+	
+	<bean id="idS" class="cigma.pfe.application.services.FactureServiceImpl">
+	
+		<property name="ifactureDao" ref="idD"></property>
+	
+	</bean>
+	
+	<bean id="idD" class="cigma.pfe.application.dao.FactureDaoImpl"></bean>
+
+</beans>
